@@ -5,6 +5,7 @@ import { GeistMono } from "geist/font/mono"
 import { Playfair_Display } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
+import "./clipboard.css"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { WhatsAppButton } from "@/components/whatsapp-button"
@@ -104,6 +105,7 @@ export default function RootLayout({
           <Footer />
           <WhatsAppButton />
         </Suspense>
+        <ClipboardPatch />
         <Analytics />
       </body>
     </html>
