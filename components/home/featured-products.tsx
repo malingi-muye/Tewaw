@@ -42,20 +42,20 @@ export function FeaturedProducts() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 mb-12">
           {products.map((product, index) => (
-            <Card key={index} className="overflow-hidden group hover:shadow-lg transition-shadow">
-              <div className="relative h-64 overflow-hidden">
+            <Card key={index} className="overflow-hidden group hover:shadow-lg transition-shadow gap-4 rounded-lg py-4">
+              <div className="relative h-48 overflow-hidden">
                 <img
                   src={product.image || "/placeholder.svg"}
                   alt={product.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
-              <CardContent className="p-6">
-                <h3 className="font-serif text-2xl font-bold text-foreground mb-2">{product.title}</h3>
-                <p className="text-muted-foreground leading-relaxed mb-4">{product.description}</p>
-                <div className="flex flex-col sm:flex-row gap-3">
+              <CardContent className="p-4">
+                <h3 className="font-serif text-lg md:text-xl font-bold text-foreground mb-1">{product.title}</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed mb-3">{product.description}</p>
+                <div className="flex flex-col sm:flex-row gap-2">
                   <Button asChild variant="outline" size="sm">
                     <Link href={`/products/${product.slug}`}>View Details</Link>
                   </Button>
