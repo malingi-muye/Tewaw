@@ -10,6 +10,7 @@ import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { WhatsAppButton } from "@/components/whatsapp-button"
 import { Suspense } from "react"
+import ClipboardPatch from "@/components/ui/clipboard-patch"
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
