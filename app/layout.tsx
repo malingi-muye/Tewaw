@@ -8,10 +8,12 @@ import "./globals.css"
 import "./clipboard.css"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
-import { WhatsAppButton } from "@/components/whatsapp-button"
 import { Suspense } from "react"
-import ClipboardPatch from "@/components/ui/clipboard-patch"
-import ErrorFilter from "@/components/ui/error-filter"
+import dynamic from "next/dynamic"
+
+const WhatsAppButton = dynamic(() => import("@/components/whatsapp-button"), { ssr: false })
+const ClipboardPatch = dynamic(() => import("@/components/ui/clipboard-patch"), { ssr: false })
+const ErrorFilter = dynamic(() => import("@/components/ui/error-filter"), { ssr: false })
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
