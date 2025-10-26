@@ -70,10 +70,10 @@ export function PortfolioGallery() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 mb-12">
           {portfolioItems.map((item, index) => (
-            <Card key={index} className="overflow-hidden group hover:shadow-lg transition-shadow">
-              <div className="relative h-64 overflow-hidden">
+            <Card key={index} className="overflow-hidden group hover:shadow-lg transition-shadow gap-4 rounded-lg py-4">
+              <div className="relative h-48 overflow-hidden">
                 <img
                   src={item.image || "/placeholder.svg"}
                   alt={item.title}
@@ -85,9 +85,9 @@ export function PortfolioGallery() {
                   </span>
                 </div>
               </div>
-              <CardContent className="p-6">
-                <h3 className="font-serif text-xl font-bold text-foreground mb-2">{item.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
+              <CardContent className="p-4">
+                <h3 className="font-serif text-lg md:text-xl font-bold text-foreground mb-1">{item.title}</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed mb-3">{item.description}</p>
               </CardContent>
             </Card>
           ))}
