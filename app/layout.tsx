@@ -11,6 +11,7 @@ import { Footer } from "@/components/footer"
 import { WhatsAppButton } from "@/components/whatsapp-button"
 import { Suspense } from "react"
 import ClipboardPatch from "@/components/ui/clipboard-patch"
+import ErrorFilter from "@/components/ui/error-filter"
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
