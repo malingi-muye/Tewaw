@@ -6,6 +6,7 @@ import { Playfair_Display } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 import "./clipboard.css"
+import "./clipboard.css"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { WhatsAppButton } from "@/components/whatsapp-button"
@@ -108,6 +109,7 @@ export default function RootLayout({
           <WhatsAppButton />
         </Suspense>
         <ClipboardPatch />
+        <ErrorFilter />
         <Analytics />
       </body>
     </html>
