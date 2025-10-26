@@ -103,10 +103,8 @@ export default function RootLayout({
           <Navigation />
           {children}
           <Footer />
-          <WhatsAppButton />
         </Suspense>
-        <ClipboardPatch />
-        <ErrorFilter />
+        <ClientWidgets />
         <Analytics />
       </body>
     </html>
