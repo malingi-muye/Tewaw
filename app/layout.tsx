@@ -9,11 +9,7 @@ import "./clipboard.css"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Suspense } from "react"
-import dynamic from "next/dynamic"
-
-const WhatsAppButton = dynamic(() => import("@/components/whatsapp-button"), { ssr: false })
-const ClipboardPatch = dynamic(() => import("@/components/ui/clipboard-patch"), { ssr: false })
-const ErrorFilter = dynamic(() => import("@/components/ui/error-filter"), { ssr: false })
+import ClientWidgets from "@/components/ui/client-widgets"
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
